@@ -1,0 +1,10 @@
+l = []
+x = 0
+n = 0
+nb = float(input("Vous cherchez la table de multiplication de quel nombre ? "))
+for loop in range(10):
+    l.append(nb * x)
+    x = x + 1
+for i in l:
+    print(f"{nb} * {n} = {round(i, 1)}")
+    n = n + 1
