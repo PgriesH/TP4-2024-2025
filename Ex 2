@@ -1,0 +1,20 @@
+nombreEtudiants = int(input("Donnez le nombre d'etudiants : "))
+moyenne = 0.0
+nbdepart = 0
+notes = []
+for loop in range(nombreEtudiants):
+    Note = float(input(f"Note etudiant {nbdepart} : "))
+    notes.append(Note)
+    nbdepart = nbdepart + 1
+
+nbdepart = 0
+
+for i in notes:
+    moyenne = moyenne + i
+moyenne = moyenne / nombreEtudiants
+print(f"Moyenne de classe : {moyenne}")
+
+print("Numéro de l’Etudiant | note | ecart a la moyenne")
+for j in notes:
+    print(f"{nbdepart} | {j} | {j - moyenne}")
+    nbdepart = nbdepart + 1
