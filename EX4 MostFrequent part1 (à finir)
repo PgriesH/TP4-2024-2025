@@ -4,15 +4,22 @@ L1 = [2, 7, 5, 6, 7, 1, 6, 2, 1, 7, 6]
 #** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** * /
 plusfreq = 0
 freq = 0
-nbfreq = 0
+nbfreq = None
+
+
 for i in range(len(L1)):
-    nb = L1[i]
+    nb = L1[i]  
+    freq = 0    
+    
+   
     for j in range(len(L1)):
         if L1[j] == nb:
-            freq = freq + 1
-            if freq > plusfreq:
-                plusfreq = freq
-                nbfreq = nb
+            freq += 1
+
+    
+    if freq > plusfreq:
+        plusfreq = freq
+        nbfreq = nb
 
 print(f"Le nombre le plus frequent dans la liste est le : {nbfreq} ({plusfreq} x)")
 
