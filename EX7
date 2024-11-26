@@ -1,0 +1,29 @@
+# Tuplet représentant un binôme
+binome = ("login1", "login2")
+
+# Affichage des informations du binôme
+print(f"L'étudiant {binome[0]} est en binôme avec l'étudiant {binome[1]}")
+
+# Saisir un nouveau login pour remplacer le second élément
+nouveau_login = input("Entrez un nouveau login pour le second membre du binôme : ")
+
+# Tenter de modifier le tuplet
+try:
+    binome[1] = nouveau_login
+except TypeError as e:
+    print(f"Erreur : {e}")
+
+# Tenter de supprimer le second élément
+try:
+    del binome[1]
+except TypeError as e:
+    print(f"Erreur : {e}")
+
+# Saisir un login pour le troisième membre
+troisieme_login = input("Entrez un login pour ajouter un troisième membre au binôme : ")
+
+# Former un trinôme en créant un nouveau tuplet
+trinome = binome + (troisieme_login,)
+
+# Affichage du trinôme
+print(f"Trinôme formé : {trinome}")
